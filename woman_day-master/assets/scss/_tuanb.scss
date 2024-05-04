@@ -1,0 +1,62 @@
+.khanh-thuy-hien {
+    background-color: $bg-earth;
+
+    &__img {
+        padding: 45px 30px;
+        overflow: hidden;
+
+        img {
+            cursor: pointer;
+            border-radius: 6px;
+            transition: transform 1s ease;
+        }
+    }
+
+    &__img:hover img {
+        transform: scale(1.05);
+    }
+
+    &__card {
+        padding-top: 45px;
+        padding-bottom: 45px;
+
+        .card {
+            border-radius: 10px;
+        }
+    }
+}
+
+.doly {
+    background-color: $white;
+    padding: 45px;
+
+    &__wrapper {
+        border: 1px solid $border-color;
+        border-radius: 6px;
+    }
+
+    &__card {
+        background-color: $bg-pink;
+        border-radius: 6px 0 0 6px;
+        padding: 24px 48px;
+        
+    }
+
+    &__title {
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 72px;
+    }
+
+    &__text {
+        margin-top: 50px;
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    &__img {
+        img {
+            border-radius: 0 6px 6px 0;
+        }
+    }
+}

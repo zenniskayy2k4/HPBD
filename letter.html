@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Cảm Ơn</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .letter {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: rotate 2s infinite; /* Thêm animation quay với thời gian là 2 giây và lặp vô hạn */
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .signature {
+            font-size: 18px;
+            font-style: italic;
+            color: #777;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="letter">
+        <div class="header">Lời Cảm Ơn</div>
+        <div class="content">
+            <p>Xin chân thành cảm ơn bạn vì sự hỗ trợ và đồng hành cùng chúng tôi. Điều này có ý nghĩa rất lớn đối với chúng tôi.</p>
+            <p>Chúng tôi trân trọng và biết ơn mọi đóng góp của bạn vào dự án của chúng tôi.</p>
+        </div>
+        <div class="signature">Trân trọng,<br> [Tên của bạn]</div>
+    </div>
+</body>
+</html>

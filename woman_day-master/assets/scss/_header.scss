@@ -1,0 +1,53 @@
+.header {
+  background: linear-gradient(
+      to right,
+      rgb(238, 230, 235) 0%,
+      rgb(253, 216, 248) 100%
+  );
+  padding: 10px 15px;
+
+  @media #{$xs} {
+    padding: 0;
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+    @media #{$md} {
+      width: 130px;
+    }
+    @media #{$xs} {
+      width: 70px;
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+  overflow: hidden;
+
+  @media #{$xs} {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  }
+  
+  &__image {
+    height: 750px;
+    width: 100%;
+
+    @media #{$desktop} {
+      height: 900px;
+    }
+    @media #{$xs} {
+      height: 655px;
+    }
+    @media #{$sm} {
+      height: 550px;
+    }
+  }
+}

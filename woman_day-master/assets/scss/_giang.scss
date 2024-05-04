@@ -1,0 +1,425 @@
+/*Responsive*/
+$breakpoints: (
+  smallphone-and-down: '(max-width: 391px)',
+  phone-and-down: '(max-width: 575px)',
+  tablet-and-down: '(max-width: 769px)',
+  desktop-and-down: '(max-width: 991px)',
+  largedesktop-and-down: '(max-width: 1199px)',
+  extralarge-and-down: '(max-width: 1439px)',
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+    @media #{$query} {
+      @content;
+    }
+  }
+}
+
+
+
+.container-g {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+
+    @include respond-to('tablet-and-down') {
+        width: 100%;
+    }
+
+    @include respond-to('smallphone-and-down') {
+       width: 100%;
+    }
+
+    img {
+        transition: ease-in-out 0.5s;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+}
+
+
+.wrapper-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nguyen-thi-huong {
+    background-color: #f1b5b8;
+
+    
+
+    .container-left {
+        background-color: #ffffff;
+        flex-basis: 50%;
+        position: relative;
+        top: -40px;
+        left: 20px;
+        box-shadow: 20px 20px 10px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+
+        @include respond-to('smallphone-and-down') {
+            top: 0px;
+            left: 0px;
+         }
+    }
+
+    .wrapper-inner {
+        @include respond-to('smallphone-and-down') {
+            flex-direction: column;
+         }
+    }
+
+    .info {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @include respond-to('tablet-and-down') {
+            width: 350px;
+            height: 350px;
+        }
+
+        @include respond-to('smallphone-and-down') {
+            height: 300px;
+         }
+
+        
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            padding: 0 35px;
+        }
+    }
+
+    .container-right {
+        flex-basis: 50%;
+    }
+
+    img {
+        border-radius: 8px;
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        position: relative;
+        top: 30px;
+        right: 0px;
+
+        @include respond-to('tablet-and-down') {
+            width: 300px;
+            height: 300px;
+        }
+        @include respond-to('smallphone-and-down') {
+            width: 200px;
+            height: 200px;
+         }
+    }
+}
+
+
+
+/*Vu Thi Ngoc*/
+.vu-thi-ngoc {
+    background-color: #f9e79b;
+
+    .wrapper-inner {
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        flex-direction: row-reverse;
+        background-color: #f1c50e;
+        @include respond-to('tablet-and-down') {
+            width: 80vw;
+        }
+        @include respond-to('smallphone-and-down') {
+            flex-direction: column;
+            width: auto;
+            margin: 0 10px;
+         }
+    }
+
+    .container-left {
+        flex-basis: 90%;
+    }
+
+    .container-right {
+        flex-basis: 50%;
+        position: relative;
+        width: 500px;
+        height: 500px;
+        @include respond-to('smallphone-and-down') {
+            width: auto;
+            height: auto;
+         }
+        
+    }
+
+    .info {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @include respond-to('smallphone-and-down') {
+            height: 300px;
+         }
+
+        
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            padding: 0 35px;
+        }
+    }
+
+    .img-container {
+        position: absolute;
+        top: 50px;
+        left: -50px;
+
+        @include respond-to('tablet-and-down') {
+            top: 95px;
+            left: -50px;
+        }
+        @include respond-to('smallphone-and-down') {
+            top: 15px;
+            left: 0px;
+            position: relative;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0,  0.5);
+         }
+        
+    }
+
+    img {
+        border-radius: 10px;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        @include respond-to('tablet-and-down') {
+            width: 300px;
+            height: 300px;
+        }
+        @include respond-to('smallphone-and-down') {
+            width: 200px;
+            height: 200px;
+         }
+    }
+}
+
+
+/*Dang Thi Duyen*/
+.dang-thi-duyen {
+    background-color: rgb(92, 151, 230);
+
+    @include respond-to('smallphone-and-down') {
+        height: 700px;
+     }
+
+     .container-right {
+        @include respond-to('tablet-and-down') {
+            position: relative;
+            top: 30px;
+        }
+        @include respond-to('smallphone-and-down') {
+            position: relative;
+            top: 38px;
+         }
+     }
+
+    .wrapper-inner {
+        @include respond-to('tablet-and-down') {
+            flex-direction: column;
+        }
+        @include respond-to('smallphone-and-down') {
+            flex-direction: column;
+         }
+    }
+
+    .img-container {
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0,  0.5);
+        padding: 20px 20px 1px 20px;
+        background-color: #ffffff;
+        transform: rotate(10deg);
+        width: 450px;
+        border-radius: 5px;
+        @include respond-to('tablet-and-down') {
+            width: 342px;
+        }
+        @include respond-to('smallphone-and-down') {
+            width: 240px;
+         }
+    }
+
+    .info {
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        transform: rotate(-10deg);
+        position: relative;
+        left: -30px;
+
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        @include respond-to('tablet-and-down') {
+            transform: rotate(0deg);
+            left: 0;
+            margin: 0 20px;
+        }
+
+        @include respond-to('smallphone-and-down') {
+            left: 0;
+            top: 15px;
+            width: 300px;
+         }
+    }
+
+    .fa-heart {
+        color: rgb(238, 32, 77);
+        font-size: 30px;
+    }
+
+    .hearts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 26px 80px;
+    }
+
+    img {
+        object-fit: cover;
+        @include respond-to('tablet-and-down') {
+            width: 300px;
+            height: 300px;
+        }
+        @include respond-to('smallphone-and-down') {
+            width: 200px;
+            height: 200px;
+         }
+    }
+}
+
+
+
+/*Doan Thuy Phuong*/
+.doan-thuy-phuong {
+    background-color: rgb(241, 209, 167);
+
+    .wrapper-inner {
+        flex-direction: row-reverse;
+        background-color: rgb(241, 194, 133);
+        border-radius: 20px;
+    }
+
+    .container-left {
+        flex-basis: 60%;
+    }
+
+    .container-right {
+        flex-basis: 40%;
+    }
+
+    .img-container {
+        img {
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+            object-fit: cover;
+
+            @include respond-to('tablet-and-down') {
+                width: 300px;
+                height: 270px;
+            }
+            @include respond-to('smallphone-and-down') {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+
+    .info {
+        margin: 30px;
+        text-align: center;
+
+        h4 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+/*Ta Thi Minh Huyen*/
+.ta-thi-minh-huyen {
+    background-color: rgb(172, 243, 219);
+
+    .wrapper-inner {
+        flex-direction: column-reverse;
+    }
+
+    .container-left {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        @include respond-to('tablet-and-down') {
+            margin: 0 20px;
+        }
+        @include respond-to('smallphone-and-down') {
+            margin: 0;
+         }
+    }
+
+    .info {
+
+        h4 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .img-container {
+        position: relative;
+        top: 10px;
+        right: -85px;
+        @include respond-to('smallphone-and-down') {
+            top: 12px;
+            right: -80px;
+         }
+
+        img {
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+
+            @include respond-to('tablet-and-down') {
+                width: 300px;
+                height: 300px;
+            }
+
+            @include respond-to('smallphone-and-down') {
+                width: 200px;
+                height: 200px;
+             }
+        }
+    }
+}
